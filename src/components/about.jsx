@@ -18,7 +18,7 @@ const AboutSection = () => {
                     {/* Image */}
                     <div className="md:w-1/3 mb-10 md:mb-0 flex justify-center" data-aos="fade-right">
                         <img
-                            src="https://static.photos/office/640x360/2"
+                            src="aboutme.png"
                             alt="Working"
                             className="rounded-lg shadow-lg w-full max-w-md"
                         />

@@ -6,7 +6,7 @@ const ProjectsSection = () => {
     {
       title: "Chat Application",
       desc: "Built a real-time chat application using MERN stack and Socket.IO for instant communication.",
-      img: "https://static.photos/technology/640x360/1",
+      img: "chatapp.jpg",
       tech: ["React", "Node.js", "MongoDB"],
       liveLink: "https://socketio-q6x1.vercel.app/",
       sourceLink: "#",
@@ -15,7 +15,7 @@ const ProjectsSection = () => {
     {
       title: "UnivPaperHub",
       desc: "A web-based platform where students can upload and access previous year question papers of their college.",
-      img: "https://static.photos/technology/640x360/2",
+      img: "univ.png",
       tech: ["EJS", "Node.js+Express", "Tailwind CSS","Cloudinary","MongoDB"],
       liveLink: "https://univpaperhub.onrender.com/",
       sourceLink: "#",
@@ -24,7 +24,7 @@ const ProjectsSection = () => {
     {
       title: "Physiotherapy Clinic Website",
       desc: "Developed a responsive and user-friendly website for a physiotherapy clinic featuring service listings, appointment booking functionality, and direct contact via phone number for easy patient communication",
-      img: "https://static.photos/technology/640x360/3",
+      img: "clinic.png",
       tech: ["React", "Node.js+Express", ],
       liveLink: "https://drkalimphysio.vercel.app/",
       sourceLink: "#",
