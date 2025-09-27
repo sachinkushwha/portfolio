@@ -39,7 +39,7 @@ const HomeSection = () => {
                         <div className="relative">
                             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
                                 <img
-                                    src="public/sachin1.jpg"
+                                    src="/sachin1.jpg"
                                     alt="Alex Carter"
                                     className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover border-4 border-white"
                                 />
