@@ -1,4 +1,3 @@
-
 import './App.css'
 import AboutSection from './components/about'
 import BackToTopButton from './components/back'
@@ -22,6 +21,7 @@ function App() {
 
   return (
     <>
+      
       <div class="bg-gray-50 text-gray-800">
         <Navbar />
         <HomeSection />

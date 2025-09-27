@@ -1,7 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import { Mail, MapPin, Clock, GitHub, Linkedin, Twitter, Instagram, Send } from "react-feather";
 
 const ContactSection = () => {
+  const [formdata, setFormdata] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    msg: ""
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormdata({
+      ...formdata, [name]: value
+    })
+  }
+  const handlesubmit =async (e) => {
+    e.preventDefault();
+    const CHAT_ID = import.meta.env.VITE_CHAT_ID;
+    const BOT_TOKEN = import.meta.env.VITE_BOT_TOKEN;
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+    const response=await fetch(url,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        chat_id: CHAT_ID,
+                text: `msg from portfolio:\nName: ${formdata.name}\nEmail: ${formdata.email}\nSub: ${formdata.subject}\nmsg: ${formdata.msg}`
+      })
+    })
+    const result=await response.json();
+    if(result.ok){
+      alert('Thank you for reaching out.\n We will respond to your message as soon as possible.\n Wishing you a wonderful day!');
+    }else{
+      alert('something went worng\nplease try again');
+    }
+
+    setFormdata({
+      name: "",
+      email: "",
+      subject: "",
+      msg: ""
+    })
+  }
   return (
     <section id="contact" className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,10 +97,10 @@ const ContactSection = () => {
 
             <h3 className="text-xl font-semibold mt-10 mb-6">Follow Me</h3>
             <div className="flex space-x-4">
-              {[{icon: <GitHub className="text-gray-700" />, link: "#"},
-                {icon: <Linkedin className="text-gray-700" />, link: "#"},
-                {icon: <Twitter className="text-gray-700" />, link: "#"},
-                {icon: <Instagram className="text-gray-700" />, link: "#"}].map((social, index) => (
+              {[{ icon: <GitHub className="text-gray-700" />, link: "#" },
+              { icon: <Linkedin className="text-gray-700" />, link: "#" },
+              { icon: <Twitter className="text-gray-700" />, link: "#" },
+              { icon: <Instagram className="text-gray-700" />, link: "#" }].map((social, index) => (
                 <a key={index} href={social.link} className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-indigo-100 transition">
                   {social.icon}
                 </a>
@@ -70,9 +110,9 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="md:w-1/2 md:pl-12" data-aos="fade-left">
-            <form id="contact-form" className="space-y-6">
+            <form id="contact-form" onSubmit={handlesubmit} className="space-y-6">
               {[
-                { id: "name", label: "Name", type: "text" },
+                { id: "name", label: "Name", type: "text", },
                 { id: "email", label: "Email", type: "email" },
                 { id: "subject", label: "Subject", type: "text" },
               ].map((field) => (
@@ -84,6 +124,8 @@ const ContactSection = () => {
                     type={field.type}
                     id={field.id}
                     name={field.id}
+                    value={formdata[field.id]}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   />
@@ -94,8 +136,10 @@ const ContactSection = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                 <textarea
                   id="message"
-                  name="message"
+                  name="msg"
                   rows="5"
+                  value={formdata.msg}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 ></textarea>
@@ -103,7 +147,7 @@ const ContactSection = () => {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center justify-center"
+                className="cursor-pointer w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center justify-center"
               >
                 <Send className="w-5 h-5 mr-2" /> Send Message
               </button>

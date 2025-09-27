@@ -24,7 +24,8 @@ const SkillsSection = () => {
                                 { name: "JavaScript", level: 85 },
                                 { name: "Node.js+Express", level: 80 },
                                 { name: "React", level: 70 },
-                                { name: "UI/UX Design", level: 60 },
+                                { name: "MongoDB", level: 70 },
+                                // { name: "UI/UX Design", level: 60 },
                             ].map((skill) => (
                                 <div key={skill.name}>
                                     <div className="flex justify-between mb-2">

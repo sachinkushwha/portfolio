@@ -1,6 +1,6 @@
 import React from "react";
 import { Code } from "react-feather"; // Feather icon
-
+import { ReactTyped } from "react-typed";
 const HomeSection = () => {
     return (
         <section id="home" className="min-h-screen flex items-center pt-16">
@@ -13,7 +13,12 @@ const HomeSection = () => {
                             Hi, I'm <span className="gradient-text"> Sachin kushwaha</span>
                         </h1>
                         <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">
-                            MERN Developer
+                            <ReactTyped
+                                strings={["MERN Developer"]}
+                                typeSpeed={50}
+                                backSpeed={30}
+                                
+                            />
                         </h2>
                         <p className="text-lg text-gray-600 mb-8 max-w-lg">
                             I build exceptional digital experiences that are fast, accessible, and visually appealing.
