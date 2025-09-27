@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       
-      <div class="bg-gray-50 text-gray-800">
+      <div class="bg-gray-50 text-gray-800 overflow-x-hidden">
         <Navbar />
         <HomeSection />
         <AboutSection />
