@@ -42,11 +42,11 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#home" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">Home</a>
-            <a href="#about" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">About</a>
-            <a href="#skills" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">Skills</a>
-            <a href="#projects" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">Projects</a>
-            <a href="#contact" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+            <a onClick={toggleMenu} href="#home" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">Home</a>
+            <a onClick={toggleMenu} href="#about" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">About</a>
+            <a onClick={toggleMenu} href="#skills" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">Skills</a>
+            <a onClick={toggleMenu} href="#projects" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">Projects</a>
+            <a onClick={toggleMenu} href="#contact" className="block px-3 py-2 text-gray-600 hover:text-indigo-600">Contact</a>
           </div>
         </div>
       )}
