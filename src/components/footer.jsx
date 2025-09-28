@@ -3,10 +3,10 @@ import { Send, GitHub, Linkedin, Twitter, Instagram } from "react-feather";
 
 const Footer = () => {
     const socialLinks = [
-        { icon: <GitHub />, link: "#" },
-        { icon: <Linkedin />, link: "#" },
-        { icon: <Twitter />, link: "#" },
-        { icon: <Instagram />, link: "#" },
+        { icon: <GitHub />, link: "https://github.com/sachinkushwha" },
+        { icon: <Linkedin />, link: "https://www.linkedin.com/in/sachin-kushwaha-859124259/" },
+        { icon: <Twitter />, link: "https://x.com/SachinKush57887?t=CIKKpe6siia0LLfjWpG3dQ&s=09" },
+        { icon: <Instagram />, link: "https://www.instagram.com/sachinkushwaha.com_?igsh=MWk2Ym1zOG1keTNiZA==" },
     ];
 
     return (
