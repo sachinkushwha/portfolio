@@ -97,10 +97,10 @@ const ContactSection = () => {
 
             <h3 className="text-xl font-semibold mt-10 mb-6">Follow Me</h3>
             <div className="flex space-x-4">
-              {[{ icon: <GitHub className="text-gray-700" />, link: "#" },
-              { icon: <Linkedin className="text-gray-700" />, link: "#" },
-              { icon: <Twitter className="text-gray-700" />, link: "#" },
-              { icon: <Instagram className="text-gray-700" />, link: "#" }].map((social, index) => (
+              {[{ icon: <GitHub className="text-gray-700" />, link: "https://github.com/sachinkushwha" },
+              { icon: <Linkedin className="text-gray-700" />, link: "https://www.linkedin.com/in/sachin-kushwaha-859124259/" },
+              { icon: <Twitter className="text-gray-700" />, link: "https://x.com/SachinKush57887?t=CIKKpe6siia0LLfjWpG3dQ&s=09" },
+              { icon: <Instagram className="text-gray-700" />, link: "https://www.instagram.com/sachinkushwaha.com_?igsh=MWk2Ym1zOG1keTNiZA==" }].map((social, index) => (
                 <a key={index} href={social.link} className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-indigo-100 transition">
                   {social.icon}
                 </a>
