@@ -4,6 +4,15 @@ import { ExternalLink, GitHub } from "react-feather";
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "shyampur bazar",
+      desc: "Transformed my village’s local market into an online platform to support local shopkeepers and bring digital access to rural customers.",
+      img: "shyampur.png",
+      tech: ["React", "Node.js", "MongoDB","Express.js"],
+      liveLink: "https://shyampurbazar.vercel.app/",
+      sourceLink: "#",
+      delay: 0,
+    },
+    {
       title: "Chat Application",
       desc: "Built a real-time chat application using MERN stack and Socket.IO for instant communication.",
       img: "chatapp.jpg",
@@ -16,7 +25,7 @@ const ProjectsSection = () => {
       title: "UnivPaperHub",
       desc: "A web-based platform where students can upload and access previous year question papers of their college.",
       img: "univ.png",
-      tech: ["EJS", "Node.js+Express", "Tailwind CSS","Cloudinary","MongoDB"],
+      tech: ["EJS", "Node.js+Express", "Tailwind CSS", "Cloudinary", "MongoDB"],
       liveLink: "https://univpaperhub.onrender.com/",
       sourceLink: "#",
       delay: 100,
@@ -25,7 +34,7 @@ const ProjectsSection = () => {
       title: "Physiotherapy Clinic Website",
       desc: "Developed a responsive and user-friendly website for a physiotherapy clinic featuring service listings, appointment booking functionality, and direct contact via phone number for easy patient communication",
       img: "clinic.png",
-      tech: ["React", "Node.js+Express", ],
+      tech: ["React", "Node.js+Express",],
       liveLink: "https://drkalimphysio.vercel.app/",
       sourceLink: "#",
       delay: 200,
